@@ -6,12 +6,13 @@
   </head>
   <body>
     <h3>Cadastro de Perfil</h3>
-    <!--<form> -> Container do formulário-->
-    <!--<input>, <textarea>, <select> -> Campos do formulário -->
-    <!--<label> => Rótulo de um campo do Formulário-->
+    <!-- <form> -> Container do formulário -->
+    <!-- <input>, <textarea>, <select> -> Campos do formulário -->
+    <!-- <label> -> Rotulo de um campo do formulário -->
     <form>
       <fieldset>
         <legend>Dados Pessoais</legend>
+
         <label for="cNome">Nome:</label>
         <input
           required
@@ -35,7 +36,7 @@
         />
         <br />
 
-        <label for="cEmail">E-mail</label>
+        <label for="cEmail">E-mail:</label>
         <input
           required
           type="email"
@@ -62,20 +63,20 @@
         <label for="cIdade">Idade:</label>
         <input
           type="number"
-          id="cIdade"
           min="0"
           max="130"
+          id="cIdade"
           name="idade"
           value="21"
         />
         <br />
 
-        <label for="cDataNasc"></label>
+        <label for="cDataNasc">Data de Nascimento:</label>
         <input
           type="date"
-          id="cDataNasc"
           min="2000-01-01"
           max="2023-02-16"
+          id="cDataNasc"
           name="dataNasc"
         />
         <br />
@@ -96,60 +97,71 @@
         />
         <br />
 
-        Interesses:
-        <label for="cHumanas">Humanas:</label>
-        <input name="interesses" id="cHumanas" type="checkbox" checked />
-
-        <label for="cExatas">Exatas</label>
-        <input name="interesses" id="cExatas" type="checkbox" />
-
-        <label for="cLing">Linguagens</label>
-        <input name="interesses" id="cLing" type="checkbox" />
-
-        <label for="cCiencia">Ciências</label>
-        <input name="interesses" type="checkbox" />
-        <br />
-
-        Escolha sue cor favorita:
-        <input type="color" name="cor" /> <br />
-
-        Sexo:
-        <input type="radio" name="sexo" checked />Masculino
-        <input type="radio" name="sexo" />Feminino
+        <label>Sexo:</label>
+        <input id="cSexoMasc" type="radio" name="sexo" />
+        <label for="cSexoMasc">Masculino</label>
+        <input id="cSexoFem" type="radio" name="sexo" />
+        <label for="cSexoFem">Feminino</label>
       </fieldset>
 
-
-
       <fieldset>
-        <legend>Outros Informações</legend>
+        <legend>Outras Informações</legend>
 
-        
-        Nível de Inglês: 1
-        <input type="range" min="0" max="5" name="ingles" value="0" /> 5 <br />
+        Interesses:
+        <label for="cHumanas">Humanas</label>
+        <input id="cHumanas" name="interesses" type="checkbox" checked />
+
+        <label for="cExatas">Exatas</label>
+        <input id="cExatas" name="interesses" type="checkbox" />
+
+        <label for="cLinguagens">Linguagens</label>
+        <input id="cLinguagens" name="interesses" type="checkbox" />
+
+        <label for="cCiencias">Ciências</label>
+        <input id="cCiencias" name="interesses" type="checkbox" />
+        <br />
+
+        <label for="cCor">Escolha sue cor favorita:</label>
+        <input type="color" id="cCor" name="cor" /> <br />
+
+        <label for="cIngles">Nível de Inglês:</label>
+        1
+        <input
+          type="range"
+          min="0"
+          max="5"
+          id="cIngles"
+          name="ingles"
+          value="0"
+        />
+        5 <br />
 
         Escondido: (Veja no inspecionar)
         <input type="hidden" value="7834349343947" name="escondido" /> <br />
 
-        Conte um pouco sobre você: <br />
+        <label for="cTexto">Conte um pouco sobre você:</label> <br />
         <textarea
           required
           rows="4"
           cols="40"
-          placeholder="Digite seu texto aqui"
+          placeholder="Digite um texto"
+          id="cTexto"
           name="texto"
         >
-            Texto inicial
-        </textarea>
+                Texto inicial
+            </textarea
+        >
         <br />
 
-        Escolaridade:
-        <select name="escolaridade" required>
+        <label for="cEscolaridade">Escolaridade:</label>
+        <select name="escolaridade" required id="cEscolaridade">
           <option disabled selected>Selecione uma opção</option>
           <option>Ensino Fundamental Completo</option>
           <option>Ensino Medio Completo</option>
           <option>Ensino Seuperior Completo</option>
         </select>
       </fieldset>
+
       <!-- <input type="submit" value="Enviar"> submeter -->
       <button type="submit">Enviar</button>
       <button type="button">Não Faz Nada</button>
